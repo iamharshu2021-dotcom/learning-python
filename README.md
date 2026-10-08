@@ -1,45 +1,49 @@
-# Day 2 - Conditional Statements in Python
+# Day 3 - Python Loops
 
-This is my Day 2 task. It covers how a program makes decisions using conditions.
+Is day maine Python ke **loops** practice kiye: `while` loop aur `for` loop.
 
-## File
+## Topics Covered
 
-- `day2_conditional.py` - contains all 6 examples
+- Repeating output (`print` multiple times)
+- `while` loop (counting, reverse counting, sum, tables, digit counter)
+- `for` loop with a list
+- `for` loop with `range()` (start, stop, step)
+- Taking user input with `input()` and `int()`
 
-## How to run
+## Practice List
+
+| # | Topic | Concept |
+|---|-------|---------|
+| 0 | Print "meow" 3 times | Basic repetition |
+| 1 | Print "hello world" 4 times | `while` loop |
+| 2 | Print "hello world" 3 times | `for` loop with a list |
+| 3 | `"hello world\n" * 3` | String multiplication (not ideal, loops are better) |
+| 4 | Print 1 to 10 | `while` loop |
+| 5 | Print 10 to 1 | `while` loop (reverse) |
+| 6 | Sum of 1 to 10 | `while` loop + accumulator |
+| 7 | Multiplication table | `while` loop + `input()` |
+| 8 | Digit counter | `while` loop + `//` operator |
+| 9 | Print 1 to 10 | `for` + `range(1, 11)` |
+| 10 | Even numbers 2 to 20 | `for` + `range(2, 21, 2)` |
+| 11 | Print fruits | `for` loop over a list |
+| 12 | Multiplication table | `for` + `range()` + `input()` |
+
+## How to Run
 
 ```bash
-python day2_conditional.py
+python day3.py
 ```
 
-Python 3.10 or newer is needed because Example 6 uses `match-case`.
+Kuch practice programs number maangte hain (table aur digit counter), to run karte waqt input dena hoga.
 
-## What I learned
+## Key Learnings
 
-| # | Example | Concept |
-|---|---------|---------|
-| 1 | Password check | `while True`, `if / else`, `break` |
-| 2 | Compare x and y | `if / elif`, comparison operators (`>`, `<`, `==`) |
-| 3 | Grade calculator | Logical operator `and`, ranges, `else` fallback |
-| 4 | Even or Odd | Modulus operator `%` |
-| 5 | Hogwarts house | `if / elif / else` with strings |
-| 6 | Hogwarts house | `match-case` (cleaner alternative to many `elif`s) |
+- `while` loop tab use hota hai jab condition pe repeat karna ho; `i += 1` bhoolna nahi warna infinite loop ban jayega.
+- `for` loop tab best hai jab pata ho kitni baar ya kis list pe chalana hai.
+- `range(start, stop, step)` mein `stop` include nahi hota.
+- `num // 10` last digit hata deta hai, isse digit count nikalta hai.
 
-## Key points
+## Files
 
-- `if` runs a block only when its condition is `True`.
-- `elif` checks another condition if the earlier ones were `False`.
-- `else` runs when none of the conditions matched.
-- `and` needs both conditions to be true, `or` needs at least one.
-- `x % 2 == 0` is the standard way to check for an even number.
-- `match-case` is useful when one value is compared against many options.
-
-## Notes
-
-- In Example 1 the loop stops after the first attempt because both branches use `break`. To allow retries, ask for the password inside the loop and only `break` on the correct one.
-- In Example 3, a score below 60 now prints `Grade F` through the `else` block.
-- In Example 6, a name that matches no case prints nothing. Add `case _:` to handle that.
-
-## Author
-
-Harsh Mishra
+- `day3.py` - all practice code
+- `README.md` - this file
