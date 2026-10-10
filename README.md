@@ -1,56 +1,49 @@
-# Day 4 - List, Tuple, Dictionary
+# Day 5 - Types of Errors in Python
 
-In this day I learned the basic Python data structures: List, Tuple and Dictionary. Set is added as a bonus.
+In this day I learned the common types of errors in Python, why they happen, and how to handle them using `try` and `except`.
 
-The code is in `day4_list_tuple_dictionary.py`. Every concept has a short explanation in the comments.
+The code is in `day5_types_of_errors.py`. Every error has a short explanation in the comments and a small example that you can run.
 
 ## Topics covered
 
-### List
-- Ordered and changeable, written with `[]`
-- Indexing and slicing
-- Add items: `append()`, `insert()`
-- Remove items: `remove()`, `pop()`
-- Functions: `len()`, `max()`, `min()`, `sum()`, `sort()`
-- Looping with `for`
+### Types of errors
+- `SyntaxError`: wrong Python grammar, for example a missing colon or bracket
+- `IndentationError`: wrong spaces at the start of a line
+- `NameError`: using a variable that is not defined
+- `TypeError`: using the wrong data type, for example adding a string and an integer
+- `ValueError`: right type but wrong value, for example `int("hello")`
+- `IndexError`: list index out of range
+- `KeyError`: dictionary key not found
+- `ZeroDivisionError`: dividing by zero
+- `AttributeError`: method or attribute does not exist
+- `ModuleNotFoundError` (`ImportError`): module cannot be imported
+- `FileNotFoundError`: file does not exist
+- Logical error: no error message, but the output is wrong
 
-### Tuple
-- Ordered but not changeable, written with `()`
-- Indexing
-- Methods: `count()`, `index()`
-- Unpacking
+### Handling errors
+- `try`, `except`, `else`, `finally`
+- Handling more than one error type
+- Catching any error with `Exception`
+- Raising our own error with `raise`
 
-### Dictionary
-- Key-value pairs, written with `{}`
-- Access with `dict[key]` and `get()`
-- Add, update and remove items
-- `keys()`, `values()`, `items()`
-- Looping and checking if a key exists
+## Three main categories
 
-### Set (bonus)
-- Unique items only, no index
-- `add()`, `remove()`
-- Union, intersection, difference
-
-## Comparison
-
-| Type | Bracket | Ordered | Changeable | Duplicates |
-|------|---------|---------|------------|------------|
-| List | `[]` | Yes | Yes | Allowed |
-| Tuple | `()` | Yes | No | Allowed |
-| Dictionary | `{k: v}` | Yes | Yes | Keys must be unique |
-| Set | `{}` | No | Yes | Not allowed |
+| Category | When it happens | Example |
+|----------|-----------------|---------|
+| Syntax error | Before the program runs | Missing colon |
+| Runtime error (exception) | While the program runs | Division by zero |
+| Logical error | Program runs but gives a wrong answer | Wrong formula |
 
 ## How to run
 
 ```
-python day4_list_tuple_dictionary.py
+python day5_types_of_errors.py
 ```
 
 ## Folder structure
 
 ```
-Day4/
+Day5/
 ├── README.md
-└── day4_list_tuple_dictionary.py
+└── day5_types_of_errors.py
 ```
